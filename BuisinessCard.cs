@@ -9,13 +9,19 @@ namespace HomeTaskFor24._10._25._14oclock
     internal class BuisinessCard :Card
     {
         private double cashback;
+        public BuisinessCard(string ownerName, double balance) : base(ownerName,balance)
+        {
+            
+        }
         public override void Withdraw(double amount)
         {
             cashback = (amount * 2 / 100) - 2;
             amount += cashback;
-            Console.WriteLine(amount);
+            Console.WriteLine("Cashback: " + cashback);
+            Console.WriteLine("Amount: " + amount);
         }
 
 
     }
 }
+
